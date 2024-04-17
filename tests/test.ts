@@ -33,15 +33,16 @@ function createKeypairFromFile(path: string): Keypair {
 
 describe("NFT Minter", async () => {
 
-    // const connection = new Connection(`http://localhost:8899`, 'confirmed');
-    const connection = new Connection(`https://api.devnet.solana.com/`, 'confirmed');
+    const connection = new Connection(`http://localhost:8899`, 'confirmed');
+    //const connection = new Connection(`https://api.devnet.solana.com/`, 'confirmed');
     const payer = createKeypairFromFile(require('os').homedir() + '/.config/solana/id.json');
-    const program = createKeypairFromFile('./program/target/deploy/program-keypair.json');
-
+    const program = createKeypairFromFile('./program/target/deploy/nft_minter_program-keypair.json');
+    //const programPubKey = new PublicKey("6n9JdCSkZeHAXGt6NXSMNJ1LLrhPHjXrFFZVHGjgW8s7")
     const mintKeypair: Keypair = Keypair.generate();
 
     it("Create an NFT!", async () => {
-
+        
+        console.log("programId : ", program.publicKey)
         const metadataAddress = (PublicKey.findProgramAddressSync(
             [
               Buffer.from("metadata"),

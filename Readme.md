@@ -18,7 +18,9 @@ cargo build-bpf
 
 To Deploy
 ```
-solana program deploy ./target/sbf-solana-solana/release/nft_minter_program.so
+solana program deploy ./target/deploy/nft_minter_program.so
+
+Program Id: 8k5PLxiZTg9J3SGxCzc4jtQKTW2CKmqGcrAmxXhWxNxa
 ```
 
 If the blockchain is stuck use the reset command:
