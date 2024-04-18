@@ -78,7 +78,7 @@ pub fn create_token(accounts: &[AccountInfo], args: CreateTokenArgs) -> ProgramR
                 .mint(*mint_account.key, true)
                 .authority(*mint_authority.key)
                 .payer(*payer.key)
-                .update_authority(*mint_authority.key, true)
+                //.update_authority(*mint_authority.key, true)
                 .is_mutable(true)
                 .primary_sale_happened(false)
                 .name(args.nft_title)

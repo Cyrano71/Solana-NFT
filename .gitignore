@@ -19,3 +19,7 @@ dump
 config-hidden
 
 global-bundle.pem
+
+.yarn
+.pnp.cjs
+.pnp.loader.mjs
